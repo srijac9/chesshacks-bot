@@ -29,20 +29,20 @@ def load_model():
         print("Loading base model...")
 
         BASE_MODEL = "Qwen/Qwen3-4B-Instruct-2507"
-        LORA_REPO = "src/lora_output"    # your LoRA folder
+        LORA_REPO = "JasmeharKaur/qwen-chess-gm-lora"  
 
+        # Tokenizer
         tokenizer = AutoTokenizer.from_pretrained(BASE_MODEL)
 
-        # Load base model ON GPU if available
+        # Load base model on GPU
         base_model = AutoModelForCausalLM.from_pretrained(
             BASE_MODEL,
             torch_dtype=torch.float16,
             device_map="auto"
         )
 
-        print("Loading LoRA adapter...")
+        print("Loading LoRA adapter from HuggingFace...")
 
-        # Correct PEFT loading — NO device_map override
         model = PeftModel.from_pretrained(
             base_model,
             LORA_REPO
@@ -50,14 +50,13 @@ def load_model():
 
         model.eval()
 
-        print("Model initialization complete!")
+        print("Model initialization complete! (Base + LoRA)")
         model_ready = True
 
     except Exception as e:
         print("\n=== MODEL LOAD ERROR ===")
         print(e)
         print("========================\n")
-
 
 # Start model loading thread
 threading.Thread(target=load_model, daemon=True).start()
