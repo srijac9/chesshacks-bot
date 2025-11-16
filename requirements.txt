@@ -1,17 +1,41 @@
-annotated-doc==0.0.4
-annotated-types==0.7.0
-anyio==4.11.0
-chess==1.11.2
-click==8.1.8
-exceptiongroup==1.3.0
+# Core Web & API
 fastapi==0.121.2
+starlette==0.49.3
+uvicorn==0.38.0
+click==8.1.8
+
+# Chess
+python-chess==1.999
+chess==1.11.2
+
+# Transformer / LLM stack
+transformers==4.46.3
+accelerate==0.34.2
+peft==0.12.0
+sentencepiece==0.2.0
+tiktoken==0.7.0
+
+# Torch (GPU/CPU auto)
+torch==2.2.2
+torchvision==0.17.2
+torchaudio==2.2.2
+
+# Tokenizer dependencies
+tokenizers==0.20.3
+
+# Networking + async
+anyio==4.11.0
+sniffio==1.3.1
 h11==0.16.0
 idna==3.11
+
+# Pydantic / utils
 pydantic==2.12.4
 pydantic_core==2.41.5
-python-chess==1.999
-sniffio==1.3.1
-starlette==0.49.3
-typing-inspection==0.4.2
 typing_extensions==4.15.0
-uvicorn==0.38.0
+typing-inspection==0.4.2
+annotated-types==0.7.0
+annotated-doc==0.0.4
+
+# Optional (prevents model load warnings)
+protobuf==4.25.3
