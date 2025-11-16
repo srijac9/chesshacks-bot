@@ -29,7 +29,7 @@ def load_model():
         print("Loading base model...")
 
         BASE_MODEL = "Qwen/Qwen3-4B-Instruct-2507"
-        LORA_REPO = "JasmeharKaur/qwen-chess-lora"  
+        LORA_REPO = "jasmehar/qwen-chess-lora"  
 
         # Tokenizer
         tokenizer = AutoTokenizer.from_pretrained(BASE_MODEL)
