@@ -14,14 +14,13 @@ accelerate==0.34.2
 peft==0.12.0
 sentencepiece==0.2.0
 tiktoken==0.7.0
-
-# Torch (GPU/CPU auto)
-torch==2.2.2
-torchvision==0.17.2
-torchaudio==2.2.2
-
-# Tokenizer dependencies
 tokenizers==0.20.3
+
+# CPU-compatible PyTorch
+torch==2.1.2+cpu
+torchvision==0.16.1+cpu
+torchaudio==2.1.2+cpu
+--extra-index-url https://download.pytorch.org/whl/cpu
 
 # Networking + async
 anyio==4.11.0
@@ -37,5 +36,4 @@ typing-inspection==0.4.2
 annotated-types==0.7.0
 annotated-doc==0.0.4
 
-# Optional (prevents model load warnings)
 protobuf==4.25.3
