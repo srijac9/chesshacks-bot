@@ -2,25 +2,17 @@
 fastapi==0.121.2
 starlette==0.49.3
 uvicorn==0.38.0
-click==8.1.8
 
 # Chess
 python-chess==1.999
-chess==1.11.2
+chess==1.11.2 
 
 # Transformer / LLM stack
 transformers==4.46.3
 accelerate==0.34.2
 peft==0.12.0
-sentencepiece==0.2.0
 tiktoken==0.7.0
 tokenizers==0.20.3
-
-# CPU-compatible PyTorch
-torch==2.1.2+cpu
-torchvision==0.16.1+cpu
-torchaudio==2.1.2+cpu
---extra-index-url https://download.pytorch.org/whl/cpu
 
 # Networking + async
 anyio==4.11.0
@@ -32,8 +24,3 @@ idna==3.11
 pydantic==2.12.4
 pydantic_core==2.41.5
 typing_extensions==4.15.0
-typing-inspection==0.4.2
-annotated-types==0.7.0
-annotated-doc==0.0.4
-
-protobuf==4.25.3
